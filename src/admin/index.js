@@ -1,4 +1,5 @@
-import { Admin, Resource, ListGuesser, EditGuesser } from 'react-admin';
+// import { ListGuesser, EditGuesser } from 'react-admin';
+import { Admin, Resource } from 'react-admin';
 
 import { CategoryList } from './category/category-list';
 import { CategoryEdit } from './category/category-edit';
@@ -22,7 +23,13 @@ import { dataProvider } from './data-provider';
 
 const App = () => (
     <Admin dataProvider={dataProvider}>
-        <Resource name="categories" list={CategoryList} edit={CategoryEdit} create={CategoryCreate} />
+        <Resource
+            name="categories"
+            list={CategoryList}
+            edit={CategoryEdit}
+            create={CategoryCreate}
+            recordRepresentation="name"
+        />
         <Resource
             name="locations"
             list={LocationList}
@@ -42,6 +49,7 @@ const App = () => (
             list={ProductList}
             edit={ProductEdit}
             create={ProductCreate}
+            recordRepresentation="name"
         />
     </Admin>
 );
