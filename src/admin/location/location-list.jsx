@@ -10,7 +10,7 @@ const locationFilters = [
 
 export const LocationList = () => (
     <List filters={locationFilters}>
-        <Datagrid rowClick="edit">
+        <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="name" />
             <TextField source="address" />
             <TextField source="coordinates" />

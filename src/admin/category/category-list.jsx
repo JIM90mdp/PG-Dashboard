@@ -10,7 +10,7 @@ const categoryFilters = [
 
 export const CategoryList = () => (
     <List filters={categoryFilters}>
-        <Datagrid rowClick="edit">
+        <Datagrid rowClick="edit" bulkActionButtons={false}>
             {/* <TextField source="id" /> */}
             <TextField source="name" />
             <TextField source="status" />
