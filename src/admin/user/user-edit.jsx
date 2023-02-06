@@ -21,6 +21,7 @@ export const UserEdit = () => (
             source="role"
             label="Role"
             optionValue="name"
+            defaultValue={"User"}
             choices={[
               { role: "User", name: "User" },
               { role: "Admin", name: "Admin" },
@@ -34,6 +35,7 @@ export const UserEdit = () => (
             source="status"
             label="Status"
             optionValue="name"
+            defaultValue={"Active"}
             // emptyText="Select an option"
             // emptyValue="Select an option"
             choices={[
