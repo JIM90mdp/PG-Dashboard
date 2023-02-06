@@ -45,11 +45,6 @@ export const UserEdit = () => (
           />
         </Box>
       </Box>
-      <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="password" validate={required()} fullWidth />
-        </Box>
-      </Box>
     </SimpleForm>
   </Edit>
 );
