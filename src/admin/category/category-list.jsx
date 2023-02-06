@@ -9,7 +9,7 @@ const categoryFilters = [
 ];
 
 export const CategoryList = () => (
-    <List filters={categoryFilters}>
+    <List filters={categoryFilters} sort={{ field: 'name', order: 'ASC' }}>
         <Datagrid rowClick="edit" bulkActionButtons={false}>
             {/* <TextField source="id" /> */}
             <TextField source="name" />
