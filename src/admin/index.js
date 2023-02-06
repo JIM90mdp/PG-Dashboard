@@ -1,4 +1,4 @@
-// import { ListGuesser, EditGuesser } from 'react-admin';
+// import { ListGuesser, EditGuesser } from 'react-admin' ;
 import { Admin, Resource } from 'react-admin';
 
 import { CategoryList } from './category/category-list';
@@ -16,6 +16,10 @@ import { ArtistCreate } from './artist/artist-create';
 import { ProductList } from './product/product-list';
 import { ProductCreate } from './product/product-create';
 import { ProductEdit } from './product/product-edit';
+
+import { UserList } from './user/user-list';
+import { UserCreate } from './user/user-create';
+import { UserEdit } from './user/user-edit';
 
 import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
@@ -54,6 +58,13 @@ const App = () => (
             edit={ProductEdit}
             create={ProductCreate}
             recordRepresentation="name"
+        />
+        <Resource
+            name="users"
+            list={UserList}
+            edit={UserEdit}
+            create={UserCreate}
+            recordRepresentation="role"
         />
     </Admin>
 );
