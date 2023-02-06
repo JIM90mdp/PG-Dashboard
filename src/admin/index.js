@@ -18,6 +18,8 @@ import { ProductCreate } from './product/product-create';
 import { ProductEdit } from './product/product-edit';
 
 import { UserList } from './user/user-list';
+import { UserCreate } from './user/user-create';
+import { UserEdit } from './user/user-edit';
 
 import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
@@ -60,8 +62,8 @@ const App = () => (
         <Resource
             name="users"
             list={UserList}
-            // edit={ProductEdit}
-            // create={ProductCreate}
+            edit={UserEdit}
+            create={UserCreate}
             recordRepresentation="role"
         />
     </Admin>
