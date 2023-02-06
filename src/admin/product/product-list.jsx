@@ -1,4 +1,14 @@
-import { Datagrid, List, TextField, TextInput, SelectInput, ReferenceField, DateField, NumberField } from 'react-admin';
+import {
+    Datagrid,
+    List,
+    TextField,
+    TextInput,
+    SelectInput,
+    ReferenceField,
+    DateField,
+    NumberField,
+    FunctionField
+} from 'react-admin';
 
 const productFilters = [
     <TextInput source="name" label="Search" alwaysOn />,
@@ -20,7 +30,14 @@ export const ProductList = () => (
             </ReferenceField>
             <DateField source="startDate" locales="es-AR" />
             <DateField source="endDate" locales="es-AR" />
-            <TextField source="startTime" />
+            <FunctionField source="startTime" label="Time" render={record => {
+                if (!record.startTime) {
+                    return '';
+                }
+
+                const timeTokens = record.startTime.split(':');
+                return `${timeTokens[0]}:${timeTokens[1]}`;
+            }} />
             <NumberField source="stock" />
             <NumberField source="price" />
             <TextField source="status" />
