@@ -17,12 +17,16 @@ import { ProductList } from './product/product-list';
 import { ProductCreate } from './product/product-create';
 import { ProductEdit } from './product/product-edit';
 
+import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
+import { authProvider } from './auth-provider';
+
+
 
 // const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
 const App = () => (
-    <Admin dataProvider={dataProvider}>
+    <Admin authProvider={authProvider} dataProvider={dataProvider} dashboard={Dashboard}>
         <Resource
             name="categories"
             list={CategoryList}
