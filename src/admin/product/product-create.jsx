@@ -1,18 +1,20 @@
-import { 
-    Create, 
-    SimpleForm, 
-    TextInput, 
-    SelectInput, 
-    required, 
-    ReferenceInput, 
-    DateInput, 
-    NumberInput, 
-    ReferenceArrayInput, 
+import {
+    Create,
+    SimpleForm,
+    TextInput,
+    SelectInput,
+    required,
+    ReferenceInput,
+    DateInput,
+    TimeInput,
+    NumberInput,
+    ReferenceArrayInput,
     SelectArrayInput,
     ImageInput,
     ImageField
- } from 'react-admin';
+} from 'react-admin';
 import { Box } from '@mui/material';
+import { formatTime, parseTime } from './utils';
 
 const productDefaultValues = () => ({ startDate: new Date(), endDate: new Date(), stock: 0, price: 0, status: 'Active' });
 
@@ -59,7 +61,13 @@ export const ProductCreate = () => (
                     <DateInput source="endDate" validate={required()} fullWidth />
                 </Box>
                 <Box flex={1} ml={{ xs: 0, sm: '0.5em' }}>
-                    <TextInput source="startTime" validate={required()} fullWidth />
+                    <TimeInput
+                        source="startTime"
+                        parse={parseTime}
+                        format={formatTime}
+                        validate={required()}
+                        fullWidth
+                    />
                 </Box>
             </Box>
             <Box display={{ xs: 'block', sm: 'flex', width: '100%' }}>

@@ -6,6 +6,7 @@ import {
     required,
     ReferenceInput,
     DateInput,
+    TimeInput,
     NumberInput,
     // useRecordContext,
     ReferenceArrayInput,
@@ -15,6 +16,7 @@ import {
 } from 'react-admin';
 import { Box } from '@mui/material';
 import { CustomToolbar } from '../custom-toolbar';
+import { formatTime, parseTime } from './utils';
 
 // Custom title example
 // const ProductTitle = () => {
@@ -67,7 +69,13 @@ export const ProductEdit = () => (
                     <DateInput source="endDate" validate={required()} fullWidth />
                 </Box>
                 <Box flex={1} ml={{ xs: 0, sm: '0.5em' }}>
-                    <TextInput source="startTime" validate={required()} fullWidth />
+                    <TimeInput
+                        source="startTime"
+                        parse={parseTime}
+                        format={formatTime}
+                        validate={required()}
+                        fullWidth
+                    />
                 </Box>
             </Box>
             <Box display={{ xs: 'block', sm: 'flex', width: '100%' }}>
