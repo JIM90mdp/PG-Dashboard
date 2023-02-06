@@ -15,7 +15,6 @@ export const UserList = () => (
         <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="userName" />
             <TextField source="role" />
-            <TextField source="password" />
             <TextField source="status" />
         </Datagrid>
     </List>
