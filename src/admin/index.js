@@ -1,4 +1,4 @@
-// import { ListGuesser, EditGuesser } from 'react-admin';
+// import { ListGuesser, EditGuesser } from 'react-admin' ;
 import { Admin, Resource } from 'react-admin';
 
 import { CategoryList } from './category/category-list';
