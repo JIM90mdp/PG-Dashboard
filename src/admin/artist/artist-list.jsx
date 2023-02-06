@@ -9,7 +9,7 @@ const artistFilters = [
 ];
 
 export const ArtistList = () => (
-    <List filters={artistFilters}>
+    <List filters={artistFilters} sort={{ field: 'name', order: 'ASC' }}>
         <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="name" />
             <ReferenceField source="groupId" reference="artists">

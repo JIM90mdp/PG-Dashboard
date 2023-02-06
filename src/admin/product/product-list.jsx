@@ -19,7 +19,7 @@ const productFilters = [
 ];
 
 export const ProductList = () => (
-    <List filters={productFilters}>
+    <List filters={productFilters} sort={{ field: 'startDate', order: 'DESC' }}>
         <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="name" />
             <ReferenceField source="locationId" reference="locations">

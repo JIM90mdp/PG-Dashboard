@@ -9,7 +9,7 @@ const locationFilters = [
 ];
 
 export const LocationList = () => (
-    <List filters={locationFilters}>
+    <List filters={locationFilters} sort={{ field: 'name', order: 'ASC' }}>
         <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="name" />
             <TextField source="address" />
