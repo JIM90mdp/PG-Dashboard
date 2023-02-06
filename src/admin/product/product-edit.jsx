@@ -7,7 +7,7 @@ import {
     ReferenceInput,
     DateInput,
     NumberInput,
-    useRecordContext,
+    // useRecordContext,
     ReferenceArrayInput,
     SelectArrayInput,
     ImageInput,
@@ -16,17 +16,17 @@ import {
 import { Box } from '@mui/material';
 import { CustomToolbar } from '../custom-toolbar';
 
-const productDefaultValues = () => ({ startDate: new Date(), endDate: new Date(), stock: 0, price: 0, status: 'Active' });
-
-const ProductTitle = () => {
-    const record = useRecordContext();
-    console.log('record to edit: ', record);
-    return <span>Product {record ? `"${record.name}"` : ''}</span>;
-};
+// Custom title example
+// const ProductTitle = () => {
+//     const record = useRecordContext();
+//     console.log('record to edit: ', record);
+//     return <span>Product {record ? `"${record.name}"` : ''}</span>;
+// };
 
 export const ProductEdit = () => (
-    <Edit title={<ProductTitle />}>
-        <SimpleForm defaultValues={productDefaultValues} toolbar={<CustomToolbar />}>
+    // <Edit title={<ProductTitle />}>  // Custom title example
+    <Edit>
+        <SimpleForm toolbar={<CustomToolbar />}>
             <Box display={{ xs: 'block', sm: 'flex', width: '100%' }}>
                 <Box flex={2} mr={{ xs: 0, sm: '0.5em' }}>
                     <TextInput source="name"
