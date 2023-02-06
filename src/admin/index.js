@@ -17,6 +17,8 @@ import { ProductList } from './product/product-list';
 import { ProductCreate } from './product/product-create';
 import { ProductEdit } from './product/product-edit';
 
+import { UserList } from './user/user-list';
+
 import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
 import { authProvider } from './auth-provider';
@@ -54,6 +56,13 @@ const App = () => (
             edit={ProductEdit}
             create={ProductCreate}
             recordRepresentation="name"
+        />
+        <Resource
+            name="users"
+            list={UserList}
+            // edit={ProductEdit}
+            // create={ProductCreate}
+            recordRepresentation="role"
         />
     </Admin>
 );
