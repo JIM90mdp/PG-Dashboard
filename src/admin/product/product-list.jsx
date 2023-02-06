@@ -10,7 +10,7 @@ const productFilters = [
 
 export const ProductList = () => (
     <List filters={productFilters}>
-        <Datagrid rowClick="edit">
+        <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="name" />
             <ReferenceField source="locationId" reference="locations">
                 <TextField source="name" />

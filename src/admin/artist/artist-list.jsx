@@ -10,7 +10,7 @@ const artistFilters = [
 
 export const ArtistList = () => (
     <List filters={artistFilters}>
-        <Datagrid rowClick="edit">
+        <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="name" />
             <ReferenceField source="groupId" reference="artists">
                 <TextField source="name" />
