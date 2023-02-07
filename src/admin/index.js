@@ -69,7 +69,7 @@ const App = () => (
             list={UserList}
             edit={UserEdit}
             create={UserCreate}
-            recordRepresentation="role"
+            recordRepresentation="userName"
         />
         <Resource
             name="customers"

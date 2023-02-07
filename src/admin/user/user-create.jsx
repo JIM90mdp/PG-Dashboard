@@ -60,14 +60,6 @@ export const UserCreate = () => (
           />
         </Box>
       </Box>
-      <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-        <TextInput source="password" validate={required()} fullWidth />
-      </Box>
-      {/* <Box display={{ xs: 'block', sm: 'flex', width: '100%' }}>
-                <Box flex={1} ml={{ xs: 0, sm: '0.5em' }}>
-                    <ReferenceInput source="groupId" />
-                </Box>
-            </Box> */}
     </SimpleForm>
   </Create>
 );

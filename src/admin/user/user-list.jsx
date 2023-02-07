@@ -11,7 +11,7 @@ const userFilters = [
 ];
 
 export const UserList = () => (
-    <List filters={userFilters}>
+    <List filters={userFilters} sort={{ field: 'userName', order: 'ASC' }}>
         <Datagrid rowClick="edit" bulkActionButtons={false}>
             <TextField source="userName" />
             <TextField source="role" />
