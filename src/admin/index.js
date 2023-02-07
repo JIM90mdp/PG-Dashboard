@@ -21,9 +21,14 @@ import { UserList } from './user/user-list';
 import { UserCreate } from './user/user-create';
 import { UserEdit } from './user/user-edit';
 
+import { CustomerList } from './customer/customer-list';
+import { CustomerCreate } from './customer/customer-create';
+import { CustomerEdit } from './customer/customer-edit';
+
 import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
 import { authProvider } from './auth-provider';
+
 
 
 
@@ -65,6 +70,13 @@ const App = () => (
             edit={UserEdit}
             create={UserCreate}
             recordRepresentation="userName"
+        />
+        <Resource
+            name="customers"
+            list={CustomerList}
+            edit={CustomerEdit}
+            create={CustomerCreate}
+            recordRepresentation="role"
         />
     </Admin>
 );
