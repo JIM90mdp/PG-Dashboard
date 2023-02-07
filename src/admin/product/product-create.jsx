@@ -10,8 +10,6 @@ import {
     NumberInput,
     ReferenceArrayInput,
     SelectArrayInput,
-    ImageInput,
-    ImageField
 } from 'react-admin';
 import { Box } from '@mui/material';
 import { formatTime, parseTime } from './utils';
@@ -85,11 +83,6 @@ export const ProductCreate = () => (
                 <ReferenceArrayInput reference="categories" source="categories">
                     <SelectArrayInput optionText="name" fullWidth />
                 </ReferenceArrayInput>
-            </Box>
-            <Box display={{ xs: 'block', sm: 'flex', width: '100%' }}>
-                <ImageInput source="photos" label="Photos" multiple>
-                    <ImageField source="src" title="title" />
-                </ImageInput>
             </Box>
         </SimpleForm>
     </Create>
