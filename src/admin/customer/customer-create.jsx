@@ -30,11 +30,11 @@ export const CustomerCreate = () => (
         <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
           <TextInput source="name" validate={required()} fullWidth />
         </Box>
-        {/* <Box flex={2} ml={{ xs: 0, sm: "0.5em" }}>
-          <ReferenceInput source="userId" reference="user">
+        <Box flex={2} ml={{ xs: 0, sm: "0.5em" }}>
+          <ReferenceInput source="userId" reference="users">
             <SelectInput validate={required()} fullWidth />
           </ReferenceInput>
-        </Box> */}
+        </Box>
         <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
           <TextInput source="address" validate={required()} fullWidth />
         </Box>
