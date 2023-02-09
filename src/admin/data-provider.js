@@ -1,6 +1,5 @@
 import { fetchUtils } from "react-admin";
 import { stringify } from "query-string";
-import { handlePhotoUploads } from "./handle-photo-uploads";
 
 const apiUrl = 'http://localhost:3001/admin';
 const httpClient = fetchUtils.fetchJson;
@@ -41,37 +40,23 @@ export const dataProvider = {
         });
     },
     update: async (resource, params) => {
-        try {
-            // TODO: move the handle of photo uploads to product forms
-            params.data.photos = await handlePhotoUploads(params.data.photos);
-    
-            const response = await httpClient(`${apiUrl}/${resource}/${params.id}`, {
-                method: 'PUT',
-                body: JSON.stringify(params.data)
-            });
-    
-            console.log('json returned by httpClient: ', response);
-            return { data: response.json };
-            
-        } catch (error) {
-            // TODO: manage errors more granularly
-            throw new Error('Ooops! Error saving data');
-        }
+        const response = await httpClient(`${apiUrl}/${resource}/${params.id}`, {
+            method: 'PUT',
+            body: JSON.stringify(params.data)
+        });
+
+        console.log('json returned by httpClient: ', response);
+        return { data: response.json };
 
     },
     create: async (resource, params) => {
-        try {
-            const response = await httpClient(`${apiUrl}/${resource}`, {
-                method: 'POST',
-                body: JSON.stringify(params.data)
-            });
-    
-            console.log('json returned by httpClient: ', response.json);
-            return { data: { ...params.data, id: response.json.id } };
-        } catch (error) {
-            // TODO: manage errors more granularly
-            throw new Error('Ooops! Error saving data');
-        }
+        const response = await httpClient(`${apiUrl}/${resource}`, {
+            method: 'POST',
+            body: JSON.stringify(params.data)
+        });
+
+        console.log('json returned by httpClient: ', response.json);
+        return { data: { ...params.data, id: response.json.id } };
     },
     delete: (resource, params) =>
         httpClient(`${apiUrl}/${resource}/${params.id}`, {
