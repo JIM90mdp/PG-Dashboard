@@ -5,9 +5,11 @@ const userFilters = [
     <SelectInput source="status" label="Status" choices={[
         { id:"Active", name:"Active"},
         { id:"Disabled", name:"Disabled"},
-        { role:"User", name:"User"},
-        { role:"Admin", name:"Admin"},
-    ]} alwaysOn />
+    ]} alwaysOn />,
+    // <SelectInput source="role" label="Role" choices={[
+    //     { id:"Admin", name:"Admin"},
+    //     { id:"User", name:"User"},
+    // ]} alwaysOn />
 ];
 
 export const UserList = () => (
