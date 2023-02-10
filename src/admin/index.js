@@ -78,7 +78,7 @@ const App = () => (
             list={CustomerList}
             edit={CustomerEdit}
             create={CustomerCreate}
-            recordRepresentation="role"
+            recordRepresentation="name"
         />
         <Resource
             name="orders"
