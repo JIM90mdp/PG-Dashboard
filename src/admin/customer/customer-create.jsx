@@ -5,66 +5,39 @@ import {
   SelectInput,
   required,
   ReferenceInput,
-  DateInput,
-  TimeInput,
   NumberInput,
-  ReferenceArrayInput,
-  SelectArrayInput,
-  ImageInput,
-  ImageField,
+  DateInput,
+  EmailField,
 } from "react-admin";
 import { Box } from "@mui/material";
 
 const productDefaultValues = () => ({
-  startDate: new Date(),
-  endDate: new Date(),
-  stock: 0,
-  price: 0,
   status: "Active",
 });
 
 export const CustomerCreate = () => (
   <Create>
     <SimpleForm defaultValues={productDefaultValues}>
+
       <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
         <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="name" validate={required()} fullWidth />
+          <TextInput
+            source="name"
+            label="Nombre"
+            validate={required()}
+            fullWidth
+          />
         </Box>
         <Box flex={2} ml={{ xs: 0, sm: "0.5em" }}>
-          <ReferenceInput source="userId" reference="users">
+          <ReferenceInput source="userId" label="Usuario" reference="users">
             <SelectInput validate={required()} fullWidth />
           </ReferenceInput>
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="address" validate={required()} fullWidth />
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="city" validate={required()} fullWidth />
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="state" validate={required()} fullWidth />
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <NumberInput source="zip" validate={required()} fullWidth />
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="email" validate={required()} fullWidth />
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <NumberInput source="telephone" validate={required()} fullWidth />
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <NumberInput source="document" validate={required()} fullWidth />
-        </Box>
-        <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
-          <DateInput source="birthDate" validate={required()} fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <SelectInput
             source="status"
-            label="Status"
+            label="Estado"
             optionValue="name"
-            defaultValue={"Active"}
             // emptyText="Select an option"
             // emptyValue="Select an option"
             choices={[
@@ -76,6 +49,58 @@ export const CustomerCreate = () => (
           />
         </Box>
       </Box>
+
+      <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <TextInput
+            source="address"
+            label="Dirección"
+            validate={required()}
+            fullWidth
+          />
+        </Box>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <TextInput
+            source="city"
+            label="Ciudad"
+            validate={required()}
+            fullWidth
+          />
+        </Box>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <TextInput
+            source="state"
+            label="Provincia"
+            validate={required()}
+            fullWidth
+          />
+        </Box>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <TextInput
+            source="zip"
+            label="Código Postal"
+            validate={required()}
+            fullWidth
+          />
+        </Box>
+      </Box>
+
+      <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <TextInput source="email" label="Email" fullWidth />
+        </Box>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <NumberInput source="telephone" label="Teléfono" fullWidth />
+        </Box>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <NumberInput source="document" label="Documento" fullWidth />
+        </Box>
+        <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
+          <DateInput source="birthDate" label="Fecha de nacimiento" fullWidth />
+        </Box>
+      </Box>
+
     </SimpleForm>
+    ;
   </Create>
 );
