@@ -1,5 +1,5 @@
 // import { ListGuesser, EditGuesser } from 'react-admin' ;
-import { Admin, Resource } from 'react-admin';
+import { Admin, ListGuesser, Resource } from 'react-admin';
 
 import { CategoryList } from './category/category-list';
 import { CategoryEdit } from './category/category-edit';
@@ -24,6 +24,8 @@ import { UserEdit } from './user/user-edit';
 import { CustomerList } from './customer/customer-list';
 import { CustomerCreate } from './customer/customer-create';
 import { CustomerEdit } from './customer/customer-edit';
+
+import { OrderList } from './order/order-list';
 
 import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
@@ -77,6 +79,10 @@ const App = () => (
             edit={CustomerEdit}
             create={CustomerCreate}
             recordRepresentation="role"
+        />
+        <Resource
+            name="orders"
+            list={OrderList}
         />
     </Admin>
 );
