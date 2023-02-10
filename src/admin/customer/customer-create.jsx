@@ -18,7 +18,6 @@ const productDefaultValues = () => ({
 export const CustomerCreate = () => (
   <Create>
     <SimpleForm defaultValues={productDefaultValues}>
-
       <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
         <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
           <TextInput
@@ -38,8 +37,6 @@ export const CustomerCreate = () => (
             source="status"
             label="Estado"
             optionValue="name"
-            // emptyText="Select an option"
-            // emptyValue="Select an option"
             choices={[
               { id: "Active", name: "Active" },
               { id: "Disabled", name: "Disabled" },

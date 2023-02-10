@@ -17,10 +17,10 @@ export const CustomerList = () => {
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
 
   const customerFilters = [
-    <TextInput source="name" label="Search" alwaysOn />,
+    <TextInput source="name" label="Buscar" alwaysOn />,
     <SelectInput
       source="status"
-      label="Status"
+      label="Estado"
       choices={[
         { id: "Active", name: "Active" },
         { id: "Disabled", name: "Disabled" },
@@ -33,24 +33,24 @@ export const CustomerList = () => {
       {isSmall ? (
         <SimpleList
           primaryText={(customer) => customer.name}
-          secondaryText={(customer) => customer.telephone}
+          secondaryText={(customer) => customer.status}
           tertiaryText={(customer) => customer.email}
         />
       ) : (
         <Datagrid rowClick="edit" bulkActionButtons={false}>
-          <TextField source="name" />
-          <ReferenceField source="userId" reference="users">
-            <TextField source="id" />
+          <TextField source="name" label="Nombre"/>
+          <ReferenceField source="userId" label="Usuario" reference="users">
+            <TextField source="userName" />
           </ReferenceField>
-          <TextField source="address" lebel="Direcciòn" />
-          <TextField source="city" lebel="Ciudad" />
-          <TextField source="state" lebel="Provincia" />
-          <NumberField source="zip" lebel="Código Postal" />
-          <EmailField source="email" lebel="Email" />
-          <NumberField source="telephone" lebel="Teléfono" />
-          <NumberField source="document" lebel="Documento" />
-          <DateField source="birthDate" lebel="Fecha de nacimiento" />
-          <TextField source="status" lebel="Estado" />
+          <TextField source="address" label="Dirección" />
+          <TextField source="city" label="Ciudad" />
+          <TextField source="state" label="Provincia" />
+          <NumberField source="zip" label="Código Postal" />
+          <EmailField source="email" label="Email" />
+          <NumberField source="telephone" label="Teléfono" />
+          <NumberField source="document" label="Documento" />
+          <DateField source="birthDate" label="Fecha de nacimiento" />
+          <TextField source="status" label="Estado" />
         </Datagrid>
       )}
     </List>
