@@ -1,5 +1,4 @@
-// import { ListGuesser, EditGuesser } from 'react-admin' ;
-import { Admin, ListGuesser, Resource } from 'react-admin';
+import { Admin, Resource } from 'react-admin';
 
 import { CategoryList } from './category/category-list';
 import { CategoryEdit } from './category/category-edit';
@@ -26,15 +25,11 @@ import { CustomerCreate } from './customer/customer-create';
 import { CustomerEdit } from './customer/customer-edit';
 
 import { OrderList } from './order/order-list';
+import { OrderEdit } from './order/order-edit';
 
 import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
 import { authProvider } from './auth-provider';
-
-
-
-
-// const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
 const App = () => (
     <Admin authProvider={authProvider} dataProvider={dataProvider} dashboard={Dashboard}>
@@ -83,6 +78,8 @@ const App = () => (
         <Resource
             name="orders"
             list={OrderList}
+            edit={OrderEdit}
+            recordRepresentation={(record) => `${record.id}`}
         />
     </Admin>
 );
