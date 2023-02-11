@@ -22,20 +22,20 @@ export const CustomerCreate = () => (
         <Box flex={2} mr={{ xs: 0, sm: "0.5em" }}>
           <TextInput
             source="name"
-            label="Nombre"
+            label="Name"
             validate={required()}
             fullWidth
           />
         </Box>
         <Box flex={2} ml={{ xs: 0, sm: "0.5em" }}>
-          <ReferenceInput source="userId" label="Usuario" reference="users">
-            <SelectInput validate={required()} fullWidth />
+          <ReferenceInput source="userId" reference="users">
+            <SelectInput validate={required()} fullWidth label="User" />
           </ReferenceInput>
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <SelectInput
             source="status"
-            label="Estado"
+            label="Status"
             optionValue="name"
             choices={[
               { id: "Active", name: "Active" },
@@ -51,7 +51,7 @@ export const CustomerCreate = () => (
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <TextInput
             source="address"
-            label="Dirección"
+            label="Address"
             validate={required()}
             fullWidth
           />
@@ -59,7 +59,7 @@ export const CustomerCreate = () => (
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <TextInput
             source="city"
-            label="Ciudad"
+            label="City"
             validate={required()}
             fullWidth
           />
@@ -67,7 +67,7 @@ export const CustomerCreate = () => (
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <TextInput
             source="state"
-            label="Provincia"
+            label="State"
             validate={required()}
             fullWidth
           />
@@ -75,7 +75,7 @@ export const CustomerCreate = () => (
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <TextInput
             source="zip"
-            label="Código Postal"
+            label="Zip"
             validate={required()}
             fullWidth
           />
@@ -84,20 +84,18 @@ export const CustomerCreate = () => (
 
       <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="email" label="Email" fullWidth />
+          <TextInput source="email" label="Email" type="email" fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <NumberInput source="telephone" label="Teléfono" fullWidth />
+          <NumberInput source="telephone" label="Telephone" fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <NumberInput source="document" label="Documento" fullWidth />
+          <NumberInput source="document" label="Document" fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <DateInput source="birthDate" label="Fecha de nacimiento" fullWidth />
+          <DateInput source="birthDate" label="Birth Date" fullWidth />
         </Box>
       </Box>
-
     </SimpleForm>
-    ;
   </Create>
 );

@@ -25,6 +25,8 @@ import { CustomerList } from './customer/customer-list';
 import { CustomerCreate } from './customer/customer-create';
 import { CustomerEdit } from './customer/customer-edit';
 
+import { ReviewList } from './review/review-list';
+
 import { OrderList } from './order/order-list';
 
 import { Dashboard } from './dashboard/dashboard';
@@ -79,6 +81,12 @@ const App = () => (
             edit={CustomerEdit}
             create={CustomerCreate}
             recordRepresentation="name"
+        />
+        <Resource
+            name="reviews"
+            list={ReviewList}
+            // edit={CustomerEdit}
+            // create={CustomerCreate}
         />
         <Resource
             name="orders"
