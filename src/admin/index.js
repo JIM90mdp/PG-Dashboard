@@ -1,4 +1,7 @@
 import { Admin, Resource } from 'react-admin';
+import {
+    FirebaseAuthProvider
+} from "react-admin-firebase";
 
 import { CategoryList } from './category/category-list';
 import { CategoryEdit } from './category/category-edit';
@@ -29,11 +32,14 @@ import { OrderEdit } from './order/order-edit';
 
 import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
-import { authProvider } from './auth-provider';
+// import { authProvider } from './auth-provider';
 
 import { ReviewList } from './review/review-list';
 import { ReviewShow } from './review/review-show';
 import { ReviewCreate } from './review/review-create';
+
+import { firebaseConfig as config } from '../FIREBASE_CONFIG';
+const authProvider = FirebaseAuthProvider(config);
 
 const App = () => (
     <Admin authProvider={authProvider} dataProvider={dataProvider} dashboard={Dashboard}>
