@@ -4,7 +4,6 @@ import {
   TextInput,
   SelectInput,
   required,
-  ReferenceInput,
 } from "react-admin";
 import { Box } from "@mui/material";
 import { CustomToolbar } from "../custom-toolbar";
