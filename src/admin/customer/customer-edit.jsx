@@ -6,26 +6,12 @@ import {
   required,
   ReferenceInput,
   DateInput,
-  TimeInput,
   NumberInput,
-  // useRecordContext,
-  ReferenceArrayInput,
-  SelectArrayInput,
-  ImageInput,
-  ImageField,
 } from "react-admin";
 import { Box } from "@mui/material";
 import { CustomToolbar } from "../custom-toolbar";
 
-// Custom title example
-// const ProductTitle = () => {
-//     const record = useRecordContext();
-//     console.log('record to edit: ', record);
-//     return <span>Product {record ? `"${record.name}"` : ''}</span>;
-// };
-
 export const CustomerEdit = () => (
-  // <Edit title={<ProductTitle />}>  // Custom title example
   <Edit>
     <SimpleForm toolbar={<CustomToolbar />}>
       <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
@@ -88,10 +74,10 @@ export const CustomerEdit = () => (
       </Box>
       <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="email" label="Email" fullWidth />
+          <TextInput source="email" label="Email" validate={required()} fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <NumberInput source="telephone" label="Teléfono" fullWidth />
+          <TextInput source="telephone" label="Teléfono" fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <NumberInput source="document" label="Documento" fullWidth />
