@@ -8,7 +8,6 @@ import {
   DateField,
   NumberField,
   EmailField,
-  FunctionField,
   SimpleList,
 } from "react-admin";
 import { useMediaQuery } from "@mui/material";
@@ -47,8 +46,8 @@ export const CustomerList = () => {
           <TextField source="state" label="Provincia" />
           <NumberField source="zip" label="Código Postal" />
           <EmailField source="email" label="Email" />
-          <NumberField source="telephone" label="Teléfono" />
-          <NumberField source="document" label="Documento" />
+          <TextField source="telephone" label="Teléfono" />
+          <TextField source="document" label="Documento" />
           <DateField source="birthDate" label="Fecha de nacimiento" />
           <TextField source="status" label="Estado" />
         </Datagrid>

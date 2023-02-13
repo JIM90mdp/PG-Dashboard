@@ -6,8 +6,7 @@ import {
   required,
   ReferenceInput,
   NumberInput,
-  DateInput,
-  EmailField,
+  DateInput
 } from "react-admin";
 import { Box } from "@mui/material";
 
@@ -84,10 +83,10 @@ export const CustomerCreate = () => (
 
       <Box display={{ xs: "block", sm: "flex", width: "100%" }}>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <TextInput source="email" label="Email" fullWidth />
+          <TextInput source="email" label="Email" validate={required()} fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
-          <NumberInput source="telephone" label="Teléfono" fullWidth />
+          <TextInput source="telephone" label="Teléfono" fullWidth />
         </Box>
         <Box flex={1} ml={{ xs: 0, sm: "0.5em" }}>
           <NumberInput source="document" label="Documento" fullWidth />
@@ -96,8 +95,6 @@ export const CustomerCreate = () => (
           <DateInput source="birthDate" label="Fecha de nacimiento" fullWidth />
         </Box>
       </Box>
-
     </SimpleForm>
-    ;
   </Create>
 );
