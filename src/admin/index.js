@@ -31,6 +31,10 @@ import { Dashboard } from './dashboard/dashboard';
 import { dataProvider } from './data-provider';
 import { authProvider } from './auth-provider';
 
+import { ReviewList } from './review/review-list';
+import { ReviewShow } from './review/review-show';
+import { ReviewCreate } from './review/review-create';
+
 const App = () => (
     <Admin authProvider={authProvider} dataProvider={dataProvider} dashboard={Dashboard}>
         <Resource
@@ -80,6 +84,13 @@ const App = () => (
             list={OrderList}
             edit={OrderEdit}
             recordRepresentation={(record) => `${record.id}`}
+        />
+        <Resource
+            name="reviews"
+            list={ReviewList}
+            create={ReviewCreate}
+            show={ReviewShow}
+            recordRepresentation="stars"
         />
     </Admin>
 );
