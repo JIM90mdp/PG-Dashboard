@@ -3,6 +3,8 @@ import {
     FirebaseAuthProvider
 } from "react-admin-firebase";
 
+import { MyLayout } from "../admin/layout/Layout";
+
 import { CategoryList } from './category/category-list';
 import { CategoryEdit } from './category/category-edit';
 import { CategoryCreate } from './category/category-create';
@@ -42,7 +44,7 @@ import { firebaseConfig as config } from '../FIREBASE_CONFIG';
 const authProvider = FirebaseAuthProvider(config);
 
 const App = () => (
-    <Admin authProvider={authProvider} dataProvider={dataProvider} dashboard={Dashboard}>
+    <Admin layout={MyLayout} authProvider={authProvider} dataProvider={dataProvider} dashboard={Dashboard}>
         <Resource
             name="categories"
             list={CategoryList}
