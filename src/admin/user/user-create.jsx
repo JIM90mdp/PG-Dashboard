@@ -4,8 +4,6 @@ import {
   TextInput,
   SelectInput,
   required,
-  ReferenceInput,
-  getValuesFromRecords,
 } from "react-admin";
 import { Box } from "@mui/material";
 
