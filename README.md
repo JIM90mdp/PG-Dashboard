@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# **React Admin - PG-Dashboard**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PG-Dashboard is an application developed with React Admin for managing the administration interfaces of the Groove-Tickets e-commerce platform. It provides an intuitive and functional interface for managing and controlling various aspects of the system.
 
-## Available Scripts
+## Key Features
 
-In the project directory, you can run:
+- **Auth Provider**: The application utilizes an `AuthProvider` to handle user authentication and authorization. This provider manages backend authentication, including credential verification, access token management, and protection of application routes and resources. It provides a security layer to ensure that only authorized users can access and utilize the system's functionalities.
 
-### `npm start`
+- **Data Provider**: PG-Dashboard uses a `DataProvider` to interact with the backend API and manage data. This provider acts as an abstraction layer between the user interface and the server, allowing for easy CRUD (Create, Read, Update, Delete) operations. It provides methods for requesting data, sending updates, and receiving server responses, facilitating data management and synchronization within the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## CRUD Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Each component in PG-Dashboard is designed to enable the creation, editing, and deletion of specific system elements. These components are integral to the administration interface and provide an intuitive way to manage and maintain data.
 
-### `npm test`
+## Styling and Design
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For the visual appearance and design of PG-Dashboard, Material-UI has been used. Material-UI is a popular UI component library for React that provides a set of predefined components and styles following the principles of Material Design. These components offer a consistent and visually appealing user experience, enhancing the overall usability and aesthetics of the application.
 
-### `npm run build`
+## Technical Requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v12 or higher)
+- React (v16.8 or higher)
+- React Admin (v3.0 or higher)
+- Material-UI (v4.0 or higher)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repository on your local machine.
+2. Navigate to the project directory: `cd PG-Dashboard`.
+3. Install dependencies using npm or yarn: `npm install` or `yarn install`.
+4. Start the application locally: `npm start` or `yarn start`.
+5. Open your browser and visit `http://localhost:3000` to see the application in action.
 
-### `npm run eject`
+## Contributions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions are welcome and appreciated. If you wish to improve PG-Dashboard or add new features, please follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Create a fork of this repository.
+2. Create a new branch for your feature: `git checkout -b new-feature`.
+3. Make your changes and commit as needed.
+4. Push your changes to the remote repository: `git push origin new-feature`.
+5. Open a pull request in this repository so that we can review your changes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<h3> 🤝🏻 &nbsp;Connect with me through: </h3>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+<a href="https://linkedin.com/in/mascarenhas-developer/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mascarenhas-developer/" height="30" width="40" /></a>
+<a href="https://instagram.com/nachomascarenhas/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="nachomascarenhas/" height="30" width="40" /></a>
+</p>
