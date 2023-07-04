@@ -42,10 +42,8 @@ Contributions are welcome and appreciated. If you wish to improve PG-Dashboard o
 5. Open a pull request in this repository so that we can review your changes.
 
 ## Contact
+### 🤝🏻 &nbsp;Connect with me through:
 
-<h3> 🤝🏻 &nbsp;Connect with me through: </h3>
+[<img align="left" alt="LinkedIn" width="30px" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" />](https://linkedin.com/in/mascarenhas-developer/)
+[<img align="left" alt="Instagram" width="30px" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" />](https://instagram.com/nachomascarenhas/)
 
-<p align="center">
-<a href="https://linkedin.com/in/mascarenhas-developer/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="mascarenhas-developer/" height="30" width="40" /></a>
-<a href="https://instagram.com/nachomascarenhas/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="nachomascarenhas/" height="30" width="40" /></a>
-</p>
